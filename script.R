@@ -92,6 +92,8 @@ interactive_map <- ggplotly(map, tooltip = "text")
 #View interactive map
 interactive_map
 
+htmlwidgets::saveWidget(as_widget(interactive_map), "interactive_map.html")
+
 # Plotly ----
 plotly_bar_2022 <- plot_ly(
   data = habitat_counts_2022, # Select data set
