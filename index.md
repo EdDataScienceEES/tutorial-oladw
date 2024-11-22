@@ -2,7 +2,7 @@
 
 To add images, replace `tutheaderbl1.png` with the file name of any image you upload to your GitHub repository.
 
-# [Title] Data Visualization: Creating Interactive Figures
+# Data Visualization: Creating Interactive Figures with plotly
 ------------------------
 
 ## Tutorial Aims
@@ -19,11 +19,24 @@ By the end of this tutorial, you'll be able to:
 
 ## Tutorial Steps
 
-#### <a href="#section1"> 1. The first section</a>
+#### <a href="#section1"> 1. Introduction</a>
+##### <a href="#section1a". a. Prerequisites
+##### <a href="#section1b". a. Starting the tutorial
 
-#### <a href="#section2"> 2. The second section</a>
 
-#### <a href="#section3"> 3. The third section</a>
+#### <a href="#section2"> 2. Converting static ggplot2 into interactive plots</a>
+##### <a href="#section2a". a. Customizing Hover Tooltips
+##### <a href="#section2b". b. Key Features of an Interactive plotly plot
+##### <a href="#section2c". c. Exporting an Interactive Plot
+
+
+#### <a href="#section3"> 3. Interactive Spatial Visualisation</a>
+
+#### <a href="#section4"> 4. Using Plotly Syntax</a>
+##### <a href="#section4a". a. Temporal Visualisations with Plotly
+
+#### <a href="#section5"> 5. Wrapping up</a>
+
 
 ---------------------------
 We are using `<a href="#section_number">text</a>` to create anchors within our text. For example, when you click on section one, the page will automatically go to where you have put `<a name="section_number"></a>`.
@@ -42,6 +55,7 @@ Now, don't get me wrong some of those interactive figures can be complex, but th
 
 Data visualization is a crucial component for communicating information quickly. By making these interactive, we allow the reader to explore this data on their own.
 
+<a name="section1a"></a>
 
 ### Prerequisites
 
@@ -56,7 +70,7 @@ If you'd like a quick refresher before starting, have a look through the these C
 - 
 
 - 
-
+<a name="section1b"></a>
 ### Starting the tutorial
 
 #### Setting up your environment 
@@ -180,6 +194,7 @@ Now what can we see here? When hovering over each bar we get some information ab
 
 Quite simple, no? There is only one issue. The hover information is, unfortunately, quite ugly. It's functional, but definitely not user friendly or appealing. If only there was some way to change it...
 
+<a name="section2a"></a>
 ### Customizing Hover Tooltips
 
 We can easily customize the hover tooltips to make them more appealing and informative. By adding a __text__ aesthetic to the original `ggplot2` code, we can specify what information we want to include.
@@ -218,6 +233,7 @@ You may have noticed we added a `<br>` into the text aesthetic. All this does is
 
 Now that we've created an interactive plot, let's have a look at the unique features it provides and how it can be used to extract meaningful insights from your data points. Interactivity adds an additional _depth_ to charts that a static simply cannot compare with.
 
+<a name="section2b"></a>
 ### Key Features of an Interactive `plotly` plot
 
 If you look at the top of your interactive plot, there are a couple of icons that make the plot useful.
@@ -230,7 +246,8 @@ If you look at the top of your interactive plot, there are a couple of icons tha
 
 4. Download interactive plot as a static png: You can download the static version of the interactive plot by pressing the camera icon on the toolbar. Downloading the interactive version is a little bit more complicated.
 
-### Exploring an Interactive Plot
+<a name="section2c"></a>
+### Exporting an Interactive Plot
 
 For downloading the interactive plot we'll have to use the `htmlwidgets` package, which you should have loaded already. As the figure is interactive, you'll have to save it as a .html file otherwise it won't work. To save the figure all you have to enter into R is.
 
@@ -240,8 +257,7 @@ htmlwidgets::saveWidget(as_widget(interactive_bar_2022_custom), "Interactive_bar
 After running this, you should see in the `File` terminal that you'll have two new files. One is the `Interactive_bar_2022_custom.html` (which you can just open and tah-dah! You have your interactive plot done!) and a new folder called `Interactive_bar_2022_custom_files`. This is not something to worry about. It is a necessary folder, however, to open the interactive graph.
 
 
-<a name="section1"></a>
-
+<a name="section3"></a>
 ## 3. Interactive Spatial Visualisation
 
 Okay, now that we know how plotly works (or at least the basics of it), lets try something else. The NPMS dataset is great because not only does it have a _lot_ of data, it has specific locations for each observation. So... lets try plotting it!
@@ -284,6 +300,7 @@ interactive_map
 
 Looking cute! 
 
+<a name="section4"></a>
 ## 4: Using Plotly Syntax
 
 While we've been converting `ggplot2` visualisations into interactive plots, `plotly` also provides its own syntax for creating visualisations directly. This can help unlock some other features available in plotly, that can't be used otherwise; for example, creating graphs with a dropdown menu.
@@ -319,6 +336,7 @@ plotly_bar_2022
 
 Badabing, Badaboom. You've just created the same graph as before, but this time entirely in plotly. Notice the built in interactivity in this chart.
 
+<a name="section4a"></a>
 ### Temporal Visualisations with Plotly
 
 Now, let's try something a bit more complicated. So far, we've looked at __regular data visualisation__, __spatial visualisation__, but what about __temporal visualisation__? 
@@ -393,7 +411,8 @@ htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_tem
 ```
 
 -------
-## Wrapping up
+<a name="section5"></a>
+## 5. Wrapping up
 
 Congratulations! You've successfully jumped into the wide world of data visualisation! Here's a little summary of what you managed to complete today:
 1. Converted static visualisations into interactive figures: You learned how to convert static `ggplot2` figures into interactive plots using `plotly`. 
@@ -419,29 +438,3 @@ Everything below this is footer material - text and links that appears at the en
 
 #### If you have any questions about completing this tutorial, please contact us on ourcodingclub@gmail.com
 
-#### <a href="INSERT_SURVEY_LINK" target="_blank">We would love to hear your feedback on the tutorial, whether you did it in the classroom or online!</a>
-
-<ul class="social-icons">
-	<li>
-		<h3>
-			<a href="https://twitter.com/our_codingclub" target="_blank">&nbsp;Follow our coding adventures on Twitter! <i class="fa fa-twitter"></i></a>
-		</h3>
-	</li>
-</ul>
-
-### &nbsp;&nbsp;Subscribe to our mailing list:
-<div class="container">
-	<div class="block">
-        <!-- subscribe form start -->
-		<div class="form-group">
-			<form action="https://getsimpleform.com/messages?form_api_token=de1ba2f2f947822946fb6e835437ec78" method="post">
-			<div class="form-group">
-				<input type='text' class="form-control" name='Email' placeholder="Email" required/>
-			</div>
-			<div>
-                        	<button class="btn btn-default" type='submit'>Subscribe</button>
-                    	</div>
-                	</form>
-		</div>
-	</div>
-</div>
