@@ -187,7 +187,7 @@ interactive_bar_2022
 
 ```
 
-<center> <img src="{{ site.baseurl }}/IMAGE_NAME.png" alt="Img" style="width: 800px;"/> </center>
+<center> <img src="{{ site.baseurl }}/static_bar_2022.png" alt="Img" style="width: 800px;"/> </center>
 
 
 Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations.
