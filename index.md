@@ -167,11 +167,7 @@ print(static_bar_2022)
 
 ```
 
-
-At this point it would be a good idea to include an image of what the plot is meant to look like so students can check they've done it right. Replace `IMAGE_NAME.png` with your own image file:
-
 <center> <img src="{{ site.baseurl }}/static_bar_2022.png" alt="Img" style="width: 800px;"/> </center>
-
 
 
 Not bad. When you run the code, you'll se a simple bar chart that displays the number of survey observations for each broad habitat type in 2022. As you can see, there are a few habitat types that have significantly more observations than others.
@@ -187,7 +183,7 @@ interactive_bar_2022
 
 ```
 
-<center> <img src="{{ site.baseurl }}/" alt="Img" style="width: 800px;"/> </center>
+<iframe src="Interactive_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
 
 
 Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations.
@@ -226,6 +222,10 @@ interactive_bar_2022_custom
 
 
 ```
+
+<iframe src="Interactive_bar_2022_custom.html" width="800" height="600" style="border:none;"></iframe>
+
+
 
 Much better! Now our chart is both interactive and aesthetically pleasing. While this bar chart with interactivity does not necessarily tell us much more than the regular chart, the techniques you've learned can be applied to any other visualisation made with `ggplot2`! Think about all the endless possibilities.
 
@@ -297,6 +297,8 @@ interactive_map <- ggplotly(map, tooltip = "text")
 interactive_map
 
 ```
+<iframe src="interactive_map.html" width="800" height="600" style="border:none;"></iframe>
+
 
 Looking cute! 
 
@@ -333,6 +335,9 @@ plotly_bar_2022 <- plot_ly(
 plotly_bar_2022
 
 ```
+
+<iframe src="plotly_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
+
 
 Badabing, Badaboom. You've just created the same graph as before, but this time entirely in plotly. Notice the built in interactivity in this chart.
 
@@ -404,6 +409,8 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
 plotly_bar_habitat
 
 ```
+<iframe src="observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe>
+
 Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Now let's just save it for good measure.
 
 ```
