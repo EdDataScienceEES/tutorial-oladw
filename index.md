@@ -1,6 +1,4 @@
-<center><img src="{{ site.baseurl }}/tutheaderbl.png" alt="Img"></center>
-
-To add images, replace `tutheaderbl1.png` with the file name of any image you upload to your GitHub repository.
+<center><img src="{{ site.baseurl }}/figures/coding_logo.png" alt="Img"></center>
 
 # Data Visualization: Creating Interactive Figures with plotly
 ------------------------
@@ -39,8 +37,6 @@ By the end of this tutorial, you'll be able to:
 
 
 ---------------------------
-We are using `<a href="#section_number">text</a>` to create anchors within our text. For example, when you click on section one, the page will automatically go to where you have put `<a name="section_number"></a>`.
-
 
 You can get all of the resources for this tutorial from <a href="https://github.com/ourcodingclub/CC-EAB-tut-ideas" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
 
@@ -167,7 +163,7 @@ print(static_bar_2022)
 
 ```
 
-<center> <img src="{{ site.baseurl }}/static_bar_2022.png" alt="Img" style="width: 800px;"/> </center>
+<center> <img src="{{ site.baseurl }}/figures/static_bar_2022.png" alt="Img" style="width: 800px;"/> </center>
 
 
 Not bad. When you run the code, you'll se a simple bar chart that displays the number of survey observations for each broad habitat type in 2022. As you can see, there are a few habitat types that have significantly more observations than others.
@@ -183,7 +179,7 @@ interactive_bar_2022
 
 ```
 
-<iframe src="Interactive_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
+<iframe src="figures/Interactive_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
 
 
 Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations.
@@ -223,7 +219,7 @@ interactive_bar_2022_custom
 
 ```
 
-<iframe src="Interactive_bar_2022_custom.html" width="800" height="600" style="border:none;"></iframe>
+<center><iframe src="figures/Interactive_bar_2022_custom.html" width="800" height="600" style="border:none;"></iframe>
 
 
 
@@ -297,7 +293,7 @@ interactive_map <- ggplotly(map, tooltip = "text")
 interactive_map
 
 ```
-<iframe src="interactive_map.html" width="800" height="600" style="border:none;"></iframe>
+<center><iframe src="figures/interactive_map.html" width="800" height="600" style="border:none;"></iframe>
 
 
 Looking cute! 
@@ -336,7 +332,7 @@ plotly_bar_2022
 
 ```
 
-<iframe src="plotly_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
+<center><iframe src="plotly_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
 
 
 Badabing, Badaboom. You've just created the same graph as before, but this time entirely in plotly. Notice the built in interactivity in this chart.
@@ -409,12 +405,12 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
 plotly_bar_habitat
 
 ```
-<iframe src="observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe>
+<center><iframe src="observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe>
 
 Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Now let's just save it for good measure.
 
 ```
-htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
+htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "figures/observations_habitat_temporal.html")
 ```
 
 -------
