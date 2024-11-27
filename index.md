@@ -18,8 +18,8 @@ By the end of this tutorial, you'll be able to:
 ## Tutorial Steps
 
 #### <a href="#section1"> 1. Introduction</a>
-##### <a href="#section1a". a. Prerequisites</a>
-##### <a href="#section1b". a. Starting the tutorial</a>
+##### <a href="#section1a">. a. Prerequisites</a>
+##### <a href="#section1b">. a. Starting the tutorial</a>
 
 
 #### <a href="#section2"> 2. Converting static ggplot2 into interactive plots</a>
