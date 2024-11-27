@@ -1,4 +1,3 @@
-rm(list=ls())
 # Purpose of the script
 # Your name, data and email
 
