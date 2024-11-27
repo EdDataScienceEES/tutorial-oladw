@@ -39,7 +39,7 @@ ggsave("figures/static_bar_2022.png", plot = static_bar_2022)
 interactive_bar_2022 <- ggplotly(static_bar_2022)
 
 interactive_bar_2022
-htmlwidgets::saveWidget(as_widget(interactive_bar_2022), "figures/Interactive_bar_2022.html")
+htmlwidgets::saveWidget(as_widget(interactive_bar_2022), "figures/Interactive_bar_2022.html", selfcontained = TRUE)
 
 
 
