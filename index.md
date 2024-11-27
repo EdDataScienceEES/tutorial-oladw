@@ -18,22 +18,24 @@ By the end of this tutorial, you'll be able to:
 ## Tutorial Steps
 
 #### <a href="#section1"> 1. Introduction</a>
-##### <a href="#section1a". a. Prerequisites</a>
-##### <a href="#section1b". a. Starting the tutorial</a>
+##### <a href="#section1a">. a. Prerequisites</a>
+##### <a href="#section1b">. a. Starting the tutorial</a>
 
 
 #### <a href="#section2"> 2. Converting static ggplot2 into interactive plots</a>
-##### <a href="#section2a". a. Customizing Hover Tooltips</a>
-##### <a href="#section2b". b. Key Features of an Interactive plotly plot</a>
-##### <a href="#section2c". c. Exporting an Interactive Plot</a>
+##### <a href="#section2a">. a. Customizing Hover Tooltips</a>
+##### <a href="#section2b">. b. Key Features of an Interactive plotly plot</a>
+##### <a href="#section2c">. c. Exporting an Interactive Plot</a>
 
 
 #### <a href="#section3"> 3. Interactive Spatial Visualisation</a>
 
 #### <a href="#section4"> 4. Using Plotly Syntax</a>
-##### <a href="#section4a". a. Temporal Visualisations with Plotly</a>
+##### <a href="#section4a">. a. Temporal Visualisations with Plotly</a>
 
-#### <a href="#section5"> 5. Wrapping up</a>
+#### <a href="section5"> 5. Bonus: Temporal Visualisations
+
+#### <a href="#section6"> 6. Wrapping up</a>
 
 
 ---------------------------
@@ -179,7 +181,7 @@ interactive_bar_2022
 
 ```
 
-<iframe src="figures/Interactive_bar_2022.html" width="800" height="600" style="border:none;"></iframe>
+<iframe src="Interactive_bar_2022.html" width="800" height="600"></iframe>
 
 
 Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations.
@@ -219,8 +221,7 @@ interactive_bar_2022_custom
 
 ```
 
-<center><iframe src="figures/Interactive_bar_2022_custom.html" width="800" height="600" style="border:none;"></iframe></center>
-
+<iframe src="Interactive_bar_2022_custom.html" width="800" height="600"></iframe>
 
 
 Much better! Now our chart is both interactive and aesthetically pleasing. While this bar chart with interactivity does not necessarily tell us much more than the regular chart, the techniques you've learned can be applied to any other visualisation made with `ggplot2`! Think about all the endless possibilities.
@@ -293,7 +294,7 @@ interactive_map <- ggplotly(map, tooltip = "text")
 interactive_map
 
 ```
-<center><iframe src="figures/interactive_map.html" width="800" height="600" style="border:none;"></iframe></center>
+<iframe src="interactive_map.html" width="800" height="600"></iframe>
 
 
 Looking cute! 
@@ -332,13 +333,13 @@ plotly_bar_2022
 
 ```
 
-<center><iframe src="plotly_bar_2022.html" width="800" height="600" style="border:none;"></iframe></center>
+<iframe src="plotly_bar_2022.html" width="800" height="600"></iframe>
 
 
 Badabing, Badaboom. You've just created the same graph as before, but this time entirely in plotly. Notice the built in interactivity in this chart.
 
-<a name="section4a"></a>
-### Temporal Visualisations with Plotly
+<a name="section5"></a>
+## 5. Bonus: Temporal Visualisations with Plotly
 
 Now, let's try something a bit more complicated. So far, we've looked at __regular data visualisation__, __spatial visualisation__, but what about __temporal visualisation__? 
 
@@ -405,16 +406,16 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
 plotly_bar_habitat
 
 ```
-<center><iframe src="observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe></center>
+<iframe src="observations_habitat_temporal.html" width="800" height="600"></iframe>
 
 Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Now let's just save it for good measure.
 
 ```
-htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "figures/observations_habitat_temporal.html")
+htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
 ```
 
 -------
-<a name="section5"></a>
+<a name="section6"></a>
 ## 5. Wrapping up
 
 Congratulations! You've successfully jumped into the wide world of data visualisation! Here's a little summary of what you managed to complete today:
