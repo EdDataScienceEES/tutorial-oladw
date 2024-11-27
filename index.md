@@ -404,12 +404,12 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
 plotly_bar_habitat
 
 ```
-<center><iframe src="observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe></center>
+<center><iframe src="{{ site.baseurl }}/figures/observations_habitat_temporal.html" width="800" height="600" style="border:none;"></iframe></center>
 
 Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Now let's just save it for good measure.
 
 ```
-htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "figures/observations_habitat_temporal.html")
+htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
 ```
 
 -------
