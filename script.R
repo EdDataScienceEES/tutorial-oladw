@@ -33,12 +33,15 @@ static_bar_2022 <- ggplot(habitat_counts_2022, aes(
 # Print figure
 print(static_bar_2022)
 
-ggsave("static_bar_2022.png", plot = static_bar_2022)
+ggsave("figures/static_bar_2022.png", plot = static_bar_2022)
 
 
 interactive_bar_2022 <- ggplotly(static_bar_2022)
 
 interactive_bar_2022
+htmlwidgets::saveWidget(as_widget(interactive_bar_2022), "figures/Interactive_bar_2022.html")
+
+
 
 # Create a customized static bar chart with hover tooltips
 static_bar_2022_custom <- ggplot(habitat_counts_2022, aes(
@@ -63,7 +66,7 @@ interactive_bar_2022_custom <- ggplotly(static_bar_2022_custom, tooltip = "text"
 #View interactive plot
 interactive_bar_2022_custom
 
-htmlwidgets::saveWidget(as_widget(interactive_bar_2022_custom), "Interactive_bar_2022_custom.html")
+htmlwidgets::saveWidget(as_widget(interactive_bar_2022_custom), "figures/Interactive_bar_2022_custom.html")
 
 
 
@@ -92,7 +95,7 @@ interactive_map <- ggplotly(map, tooltip = "text")
 #View interactive map
 interactive_map
 
-htmlwidgets::saveWidget(as_widget(interactive_map), "interactive_map.html")
+htmlwidgets::saveWidget(as_widget(interactive_map), "figures/interactive_map.html")
 
 # Plotly ----
 plotly_bar_2022 <- plot_ly(
@@ -112,7 +115,7 @@ plotly_bar_2022 <- plot_ly(
   )
 
 plotly_bar_2022
-htmlwidgets::saveWidget(as_widget(plotly_bar_2022), "plotly_bar_2022.html")
+htmlwidgets::saveWidget(as_widget(plotly_bar_2022), "figures/plotly_bar_2022.html")
 
 
 
@@ -164,5 +167,5 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
 # View figure
 plotly_bar_habitat
 
-htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
+htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "figures/observations_habitat_temporal.html")
 
