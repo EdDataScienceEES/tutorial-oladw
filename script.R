@@ -112,6 +112,7 @@ plotly_bar_2022 <- plot_ly(
   )
 
 plotly_bar_2022
+htmlwidgets::saveWidget(as_widget(plotly_bar_2022), "plotly_bar_2022.html")
 
 
 
