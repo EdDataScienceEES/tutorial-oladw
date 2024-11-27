@@ -3,39 +3,38 @@
 # Data Visualization: Creating Interactive Figures with plotly
 ------------------------
 
-## Tutorial Aims
+## Learning Objectives
 
-By the end of this tutorial, you'll be able to:
+1. Learn the significance of interactivity in data visualisation and how it enhances user engagement
+2. Create static visualisations with `gglot2` and convert them into interactive plots with `plotly`.
+3. Customise hover tooltips to make interactive plots more informative and visually appealing.
+4. Create interactive spatial visualisation using geographical data.
+5. Learn how to build interactive plots directly in plotly without relying on ggplot2.
+6. Incorporate dropdown menus to allow users to filter and explore data further.
+7. Save interactive visualisations as HTML files
 
-1. Understand what tools are available to creating interactive graphs in R. 
- 
-2. Learn how to convert static `ggplot2` figures into an interactive plot with `plotly`.
-
-3. Explore different customisation options
-
-4. Save and share your interactive graphs as standalone files.
-
-## Tutorial Steps
+## Tutorial Contents
 
 #### <a href="#section1"> 1. Introduction</a>
-##### <a href="#section1a">. a. Prerequisites</a>
-##### <a href="#section1b">. a. Starting the tutorial</a>
+- ##### <a href="#section1a"> a. Prerequisites</a>
+- ##### <a href="#section1b"> a. Starting the tutorial</a>
 
 
 #### <a href="#section2"> 2. Converting static ggplot2 into interactive plots</a>
-##### <a href="#section2a">. a. Customizing Hover Tooltips</a>
-##### <a href="#section2b">. b. Key Features of an Interactive plotly plot</a>
-##### <a href="#section2c">. c. Exporting an Interactive Plot</a>
+- ##### <a href="#section2a"> a. Customizing Hover Tooltips</a>
+- ##### <a href="#section2b"> b. Key Features of an Interactive plotly plot</a>
+- ##### <a href="#section2c"> c. Exporting an Interactive Plot</a>
 
 
 #### <a href="#section3"> 3. Interactive Spatial Visualisation</a>
 
 #### <a href="#section4"> 4. Using Plotly Syntax</a>
-##### <a href="#section4a">. a. Temporal Visualisations with Plotly</a>
+- ##### <a href="#section4a"> a. Temporal Visualisations with Plotly</a>
 
 #### <a href="section5"> 5. Bonus: Temporal Visualisations
 
 #### <a href="#section6"> 6. Wrapping up</a>
+- ##### <a href="section6a"> a. Advanced resources
 
 
 ---------------------------
@@ -51,7 +50,9 @@ In this tutorial, we'll walk though the basics of creating such interactive figu
 
 Now, don't get me wrong some of those interactive figures can be complex, but this tutorial aims to give you a quick rundown and show you how you can make one of your own!
 
-Data visualization is a crucial component for communicating information quickly. By making these interactive, we allow the reader to explore this data on their own.
+Data visualization is a crucial component for communicating information quickly. Static visualisations are great for presenting fixed narratives, but are fairly limited in thier ability to explore data points individually. By making them interactive, we allow the reader to explore this data on their own, for greater insights. 
+
+Say, for example, you're working with a large species count dataset. You may want to allow policymakers to explore species count over time, or zoom into specific regions. How would you build a figure like this? Let me show you...
 
 <a name="section1a"></a>
 
@@ -106,11 +107,11 @@ setwd("file-path")
 
 
 #### Dataset
-The time has come to load in the data! For this tutorial, we will be using a dataset from the __National Plant Monitoring Scheme (NPMS)__. Now, it is quite a large file so it might be a bit daunting at first, but don't worry! We'll focus on specific subsets to make it more manageable.
+The time has come to load in the data! For this tutorial, we will be using a dataset from the __National Plant Monitoring Scheme (NPMS)__. The dataset consists of surveyor-recorded habitat information, spatial location of the plot and an assessment of the broad habitat the plot is located in. Now, it is quite a large file so it might be a bit daunting at first, but don't worry! We'll focus on specific subsets to make it more manageable.
 
 ```r
 # Read in data ----
-npms_data <- read.csv("npmshabitatsamples_2015to2022.csv")
+npms_data <- read.csv("data/npmshabitatsamples_2015to2022.csv")
 
 ```
 Lets have a quick look at what the dataset contains:
@@ -428,12 +429,23 @@ Such figures allow audiences to explore data dynamically, uncover anomalies or t
 
 By the end of this tutorial, you've (hopefully) built an understanding on how to create interactive visualisations and their usefulness in presenting information. Keep experimenting, and trying out new ways to present information. You know how that one saying goes, a picture paints a thousand words.
 
+<a name="section6"></a>
+### Advanced Resources
+If you're ready to dive deeper into the deep deep world of interactive data visualisation, here are some other resources and tools to expand your skills.
 
-We can also provide some useful links, include a contact form and a way to send feedback.
+- __Animations with `plotly`__
+You can create dynamic plots that show changes over time to illustrate trends. Learn more about <a href="https://plotly.com/r/animations/" target="_blank">animations with `plotly`</a>.
 
-For more on `ggplot2`, read the official <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>.
+- __Using `plotly` with other tools__
+You can also combine Plotly's interactivity with other tools to build applications and dashboards. Shiny is a package in R that allows you to create web applications entirely in R. Learn more about <a href="https://plotly-r.com/linking-views-with-shiny.html" target="_blank">animations with `plotly`</a>.
 
-Everything below this is footer material - text and links that appears at the end of all of your tutorials.
+- __Explore more about `htmlwidgets`__
+We used a little bit of the R package `htmlwidgets`. It is a crucial package in exporting interactive charts, maps and other figures. Learn about <a href="https://www.htmlwidgets.org/" target="_blank">
+what packages are compatible with html widgets</a>.
+
+- __Explore extensions for `ggplot2`__
+There are some very fun extensions for `ggplot2` to enhance your visualisations. Find out more about the <a href="https://exts.ggplot2.tidyverse.org/gallery/" target="_blank">
+extensions for `ggplot2`</a>.
 
 <hr>
 <hr>
