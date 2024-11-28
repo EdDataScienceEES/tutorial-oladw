@@ -358,7 +358,7 @@ In this example, each 'trace' will represent __a different habitat type__. Using
 ```r
 plotly_bar_habitat <- plot_ly(
   data = yearly_habitat_counts,
-  x = ~year,  # Broad habitat types = x-axis
+  x = ~year,  # year = x-axis
   y = ~num_observations,       # Number of observations = y-axis
   type = 'bar',                # Set graph type: eg.bar chart, scatter, etc.
   color = ~as.factor(NPMS_broad_habitat), # Group data by habitat, these are the 'traces'
@@ -405,7 +405,9 @@ plotly_bar_habitat
 ```
 <iframe src="figures/observations_habitat_temporal.html" width="800" height="600"></iframe>
 
-Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Now let's just save it for good measure.
+Phenomenal work! You've just created a visualisation that allows the user to explore how the number of observation changes over time for each habitat type (and there's that added hover tool function as a bonus). Have a look through the graph and see if you can spot any trends (2020 seems a bit interesting, I wonder what happened there... _wink wink_). 
+
+Now let's just save it for good measure.
 
 ```
 htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
