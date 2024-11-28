@@ -39,8 +39,6 @@
 
 ---------------------------
 
-You can get all of the resources for this tutorial from <a href="https://github.com/EdDataScienceEES/tutorial-oladw" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
-
 <a name="section1"></a>
 
 ## 1. Introduction
@@ -67,7 +65,7 @@ Don't worry if you're not an expert, we'll walk through each step - one by one.
 
 #### Setting up your environment 
 
-Before we begin learning how to make some funky graphs, make sure your environment is in working order. Open `RStudio`, and create a new script by selecting `File/New File/ R script` so you can follow along. You should also clone and download [this GitHub repository], where you'll find the necessary files needed to complete this tutorial. 
+Before we begin learning how to make some funky graphs, make sure your environment is in working order. Open `RStudio`, and create a new script by selecting `File/New File/ R script` so you can follow along. You can get all of the resources for this tutorial from <a href="https://github.com/EdDataScienceEES/tutorial-oladw" target="_blank">this GitHub repository</a>. Clone or download the repo as a zip file, then unzip it.
 
 
 #### Installing and Loading Packages
