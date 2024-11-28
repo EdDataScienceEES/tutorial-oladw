@@ -1,6 +1,6 @@
 <center><img src="{{ site.baseurl }}/figures/coding_logo.png" alt="Img"></center>
 
-# Data Visualization: Creating Interactive Figures with plotly
+# Data Visualisation: Creating Interactive Figures with plotly
 ------------------------
 
 ## Learning Objectives
@@ -44,11 +44,11 @@
 ## 1. Introduction
 
 When studying data science or even just looking through the news, have you ever wondered how they make those graphs that let you explore data points with a hover? The kinds of graphs you see on BBC News or Our World in Data? At first glance, they seem like they'd require some extensive code to create. What if I told you that, actually, its much simpler than it looks?
-In this tutorial, we'll walk though the basics of creating such interactive figures in R, and add a little bit of *spice* to your visualizations. 
+In this tutorial, we'll walk though the basics of creating such interactive figures in R, and add a little bit of *spice* to your visualisations. 
 
 Now, don't get me wrong some of those interactive figures can be complex, but this tutorial aims to give you a quick rundown and show you how you can make one of your own!
 
-Data visualization is a crucial component for communicating information quickly. Static visualisations are great for presenting fixed narratives, but are fairly limited in thier ability to explore data points individually. By making them interactive, we allow the reader to explore this data on their own, for greater insights. 
+Data visualisation is a crucial component for communicating information quickly. Static visualisations are great for presenting fixed narratives, but are fairly limited in thier ability to explore data points individually. By making them interactive, we allow the reader to explore this data on their own, for greater insights. 
 
 Say, for example, you're working with a large species count dataset. You may want to allow policymakers to explore species count over time, or zoom into specific regions. How would you build a figure like this? Let me show you...
 
@@ -176,9 +176,11 @@ interactive_bar_2022
 <iframe src="figures/Interactive_bar_2022.html" width="800" height="600"></iframe>
 
 
-Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations.
+Now what can we see here? When hovering over each bar we get some information about each data point, including the broad habitat type and the number of observations. It's a quick and easy way to enhance your plot by adding some interactivity.
 
-Quite simple, no? There is only one issue. The hover information is, unfortunately, quite ugly. It's functional, but definitely not user friendly or appealing. If only there was some way to change it...
+What makes using `ggplotly()` so convenient is that it works perfectly with the plots you've already created with `ggplot2`. It preserves the aesthetic of the graph while adding the interactivity. You don't need to change the way you write your code, all you need to do is run your figure through this one function to unlock some interactivity.
+
+Quite simple, no? There is only one small issue. While the interactivity is there, the hover information is, unfortunately, a bit... _ugly_. It's functional, sure, but definitely not user-friendly or appealing. If only there was some way to change it...
 
 <a name="section2a"></a>
 ### Customizing Hover Tooltips
@@ -329,6 +331,9 @@ plotly_bar_2022
 
 
 Badabing, Badaboom. You've just created the same graph as before, but this time entirely in plotly. Notice the built in interactivity in this chart.
+
+While `ggplotly()` is perfectly capable of turning static `ggplot2` plots into interactive versions, to build an interactive graph from scratch `plot_ly()` is the way to go. Unlike `ggplotly()`, which is specifically designed to work with `ggplot2` objects, `plot_ly()` is a core function in the `plotly` package for creating figures. It gives you a lot of flexibility and control over the final interactive figure. Have a look at this <a href="https://images.plot.ly/plotly-documentation/images/r_cheat_sheet.pdf" target="_blank">`plotly` cheatsheet</a> for more information on how to create other `plotly` figures.
+
 
 <a name="section5"></a>
 ## 5. Bonus: Temporal Visualisations with Plotly
