@@ -408,6 +408,92 @@ Phenomenal work! You've just created a visualisation that allows the user to exp
 htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_temporal.html")
 ```
 
+### Challenge:
+While the chart is interactive, the aesthetic of it is not quite clear, can you customise the tooltips in the bar chart to display:
+- The habitat type
+- The year
+- The number of observations
+
+Think about which section the tooltips needs to be in and how to define what appears in the hover info...
+
+<!-- Hint Button -->
+<button class="collapsible">Hint</button>
+<div class="content">
+    <p>You can use <code>text = ~paste()</code> to create custom tooltips. For example:</p>
+    <pre><code>
+text = ~paste("Habitat Type:", NPMS_broad_habitat,
+              "<br>Year:", year,
+              "<br>Observations:", num_observations)
+    </code></pre>
+</div>
+
+<!-- Solution Button -->
+<button class="collapsible">Solution</button>
+<div class="content">
+    <pre><code>
+plotly_bar_habitat <- plot_ly(
+    data = yearly_habitat_counts,
+    x = ~year,
+    y = ~num_observations,
+    type = 'bar',
+    color = ~as.factor(NPMS_broad_habitat),
+    text = ~paste("Habitat Type:", NPMS_broad_habitat,
+                  "<br>Year:", year,
+                  "<br>Observations:", num_observations),
+    hoverinfo = "text",
+    visible = FALSE,
+    name = ~NPMS_broad_habitat
+)
+
+plotly_bar_habitat
+    </code></pre>
+</div>
+
+<script>
+    // JavaScript to toggle collapsible content
+    document.querySelectorAll('.collapsible').forEach(button => {
+        button.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+</script>
+
+<style>
+/* Style for collapsible buttons */
+.collapsible {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+/* Style for active button */
+.collapsible.active {
+    background-color: #ddd;
+}
+
+/* Style for collapsible content */
+.content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+</style>
+
 -------
 <a name="section6"></a>
 ## 6. Wrapping up
@@ -427,16 +513,20 @@ By the end of this tutorial, you've (hopefully) built an understanding on how to
 If you're ready to dive deeper into the deep deep world of interactive data visualisation, here are some other resources and tools to expand your skills.
 
 - __Animations with `plotly`__
+
 You can create dynamic plots that show changes over time to illustrate trends. Learn more about <a href="https://plotly.com/r/animations/" target="_blank">animations with `plotly`</a>.
 
 - __Using `plotly` with other tools__
-You can also combine Plotly's interactivity with other tools to build applications and dashboards. Shiny is a package in R that allows you to create web applications entirely in R. Learn more about <a href="https://plotly-r.com/linking-views-with-shiny.html" target="_blank">animations with `plotly`</a>.
+
+You can also combine Plotly's interactivity with other tools to build applications and dashboards. Shiny is a package in R that allows you to create web applications entirely in R. Learn more about <a href="https://plotly-r.com/linking-views-with-shiny.html" target="_blank">using `plotly` with `shiny`</a>.
 
 - __Explore more about `htmlwidgets`__
+
 We used a little bit of the R package `htmlwidgets`. It is a crucial package in exporting interactive charts, maps and other figures. Learn about <a href="https://www.htmlwidgets.org/" target="_blank">
 what packages are compatible with html widgets</a>.
 
 - __Explore extensions for `ggplot2`__
+
 There are some very fun extensions for `ggplot2` to enhance your visualisations. Find out more about the <a href="https://exts.ggplot2.tidyverse.org/gallery/" target="_blank">
 extensions for `ggplot2`</a>.
 
