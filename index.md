@@ -61,14 +61,7 @@ Say, for example, you're working with a large species count dataset. You may wan
 This tutorial is designed to suit any skill level from basic to intermediate R users. Before starting there are a couple of skills you should already have. You should be comfortable with operating R, including writing basic code, loading data, and working with data frames. In particular, you should already have some idea of how to create graphs using `ggplot2`. Additionally, having some familiarity in data wrangling with `dplyr` and `tidyr` is recommended. 
 
 Don't worry if you're not an expert, we'll walk through each step - one by one.
-
-If you'd like a quick refresher before starting, have a look through the these Coding Club tutorials before you begin
-
-- 
-
-- 
-
-- 
+ 
 <a name="section1b"></a>
 ### Starting the tutorial
 
@@ -365,9 +358,9 @@ plotly_bar_habitat <- plot_ly(
   x = ~year,  # Broad habitat types = x-axis
   y = ~num_observations,       # Number of observations = y-axis
   type = 'bar',                # Set graph type: eg.bar chart, scatter, etc.
-  color = ~as.factor(NPMS_broad_habitat), # Group data by year for coloring
+  color = ~as.factor(NPMS_broad_habitat), # Group data by habitat, these are the 'traces'
   visible = FALSE,             # Set all graphs to be invisible by default
-  name = ~NPMS_broad_habitat   # Label each trace by its year
+  name = ~NPMS_broad_habitat   # Label each trace by its habitat
 )
 ```
 Now that we've created the foundation for our bar chart, its time to bring it to life with some interactivity. Our goal is to create a chart where you can explore the data for each habitat separately.
@@ -384,19 +377,19 @@ plotly_bar_habitat <- plotly_bar_habitat %>%
           list(
 	    # Update the chart after selecting new habitat
             method = "update", 
-	    # Show selected habitat trace when selecting habitat in dropdown
+	    # Show only selected habitat trace when selecting habitat in dropdown
             args = list(
               list(visible = yearly_habitat_counts$NPMS_broad_habitat == habitat)
             ),
-            label = habitat) # Dropdown menu label
+            label = habitat) # Label dropdown option with habitat name
         }),
-# Dropdown customisation
+# Dropdown apperance customisation
         direction = "down",       # Dropdown opens downward
         showactive = TRUE,        # Highlight currently selected
         x = 0.95,                 # Move dropdown to the far right
         y = 1.15,                 # Position above the chart
-        xanchor = "right",        # Anchor dropdown to the right
-        yanchor = "top"           # Anchor dropdown to the top
+        xanchor = "right",        # Anchor dropdown to the right edge
+        yanchor = "top"           # Anchor dropdown to the top edge
       )
     ),
     xaxis = list(title = "Year"),          # X-axis label
@@ -417,7 +410,7 @@ htmlwidgets::saveWidget(as_widget(plotly_bar_habitat), "observations_habitat_tem
 
 -------
 <a name="section6"></a>
-## 5. Wrapping up
+## 6. Wrapping up
 
 Congratulations! You've successfully jumped into the wide world of data visualisation! Here's a little summary of what you managed to complete today:
 1. Converted static visualisations into interactive figures: You learned how to convert static `ggplot2` figures into interactive plots using `plotly`. 
