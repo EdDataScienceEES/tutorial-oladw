@@ -16,25 +16,25 @@
 ## Tutorial Contents
 
 #### <a href="#section1"> 1. Introduction</a>
-- ##### <a href="#section1a"> a. Prerequisites</a>
-- ##### <a href="#section1b"> a. Starting the tutorial</a>
+- ##### <a href="#section1a"> Prerequisites</a>
+- ##### <a href="#section1b"> Starting the tutorial</a>
 
 
 #### <a href="#section2"> 2. Converting static ggplot2 into interactive plots</a>
-- ##### <a href="#section2a"> a. Customizing Hover Tooltips</a>
-- ##### <a href="#section2b"> b. Key Features of an Interactive plotly plot</a>
-- ##### <a href="#section2c"> c. Exporting an Interactive Plot</a>
+- ##### <a href="#section2a"> Customizing Hover Tooltips</a>
+- ##### <a href="#section2b"> Key Features of an Interactive plotly plot</a>
+- ##### <a href="#section2c"> Exporting an Interactive Plot</a>
 
 
 #### <a href="#section3"> 3. Interactive Spatial Visualisation</a>
 
 #### <a href="#section4"> 4. Using Plotly Syntax</a>
-- ##### <a href="#section4a"> a. Temporal Visualisations with Plotly</a>
+- ##### <a href="#section4a"> Temporal Visualisations with Plotly</a>
 
 #### <a href="section5"> 5. Bonus: Temporal Visualisations
 
 #### <a href="#section6"> 6. Wrapping up</a>
-- ##### <a href="section6a"> a. Advanced resources
+- ##### <a href="section6a"> Advanced resources
 
 
 ---------------------------
